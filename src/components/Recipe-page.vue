@@ -1,13 +1,13 @@
 
 <template>
-  <main>
+  <main class="main-container">
     <article>
       <header>
         <picture>
           <img  
-        src="/src/assets/images/image-omelette.jpeg"
-        alt="image-omelette.jpeg" 
-        />
+          src="/src/assets/images/image-omelette.jpeg"
+          alt="image-omelette.jpeg" 
+          />
       </picture>
         <h1>Simple Omelette Recipe</h1>
         <p>
@@ -17,7 +17,7 @@
         </p>
       </header>
       <div class="menu">
-            <aside>
+          <aside>
             <div class="prep-time">
               <h2 class="heading-name">Preparation time</h2>
               <ul>
@@ -132,55 +132,56 @@
 </template>
 
 <style scoped>
-aside .prep-time {
+.prep-time {
  background-color: var(--rose-50);
  padding: 1.2em 1.5em;
  margin: 1.5em;
  border-radius: 1.2rem;
  font-weight: var(--Outfit-weight-semi-bold);
 }
-aside .heading-name {
+
+.heading-name {
   color: var(--rose-800); 
-  margin-top: 0.4rem;
+  margin-block-start: 0.4rem;
   font-family: var(--Outfit-font);
   font-weight: var(--Young-Serif-weight);
 }
+
 .menu{
   margin: auto 0;
   padding: 0.5rem;
 }
+
 .td-name{
   display: flex;
   justify-content: flex-start;
-  margin-left: 2rem;
+  margin-inline-start: 2rem;
   padding: 0.5em 0;
- font-weight: var(--Outfit-weight-regular);
+  font-weight: var(--Outfit-weight-regular);
 }
+
 .td-grams {
   display: flex;
   justify-content: flex-end;
-  margin-right: 3rem;
+  margin-inline-end: 3rem; /* replace margin-right for internationalization */
   padding: 0.5em 0;
-  margin-top: -2.7rem;
+  margin-block-start: -2.7rem; /* adjust vertical alignment  using margin-top*/
   color: var(--brown-800);
   font-weight: var(--Outfit-weight-semi-bold);
 }
 .attribution {
-  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
-  color: hsl(229, 8%, 60%);
+  font-size: var(--attribute-font-size);
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--attribute-color-a);
 }
 
-@media (min-width: 46.875rem) {
-  main{
-    margin: 1.75rem ;
+@media (min-width: 46.875rem) { 
+  .main-container {
+    margin: 2rem 1.5rem;
     padding: 1.25rem;
   }
-  picture,img{
-    border-radius: 0.625rem;
-  }
 }
+
 </style>

@@ -54,7 +54,7 @@ body{
   transition: all 300ms ease-in-out;
 }
 
-picuture, img{
+picture, img{
   max-inline-size: 100%; /*max-width: 100% for internationalization approach*/
   max-block-size: 100%; /*max-height: 100% for internationalization approach*/
   block-size: auto;  /*replace height for internationalization approach*/  

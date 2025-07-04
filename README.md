@@ -42,7 +42,7 @@ Want some support on the challenge? [Join our community](https://www.frontendmen
 
 ### Screenshot
 
-![preview](./public/preview.jpg)
+![preview](./src/assets/images/preview.jpg)
 
 ### Links
 

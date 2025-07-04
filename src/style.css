@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%); 
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%); 
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%); 
+  --brown-800: hsl(14, 45%, 36%);
+  --rose-800: hsl(332, 51%, 32%); 
+  --rose-50: hsl(330, 100%, 98%);
+
+  --attribute-color-a: hsl(228, 45%, 44%);
+
+
+  --Young-Serif-font: "Young Serif", serif;
+  --Young-Serif-weight: 400;
+  
+  --Outfit-font: "Outfit", sans-serif;
+  --Outfit-weight-regular: 400;
+  --Outfit-weight-semi-bold: 600;
+  --Outfit-weight-bold: 700;
+  
+  --body-font-size: clamp(1rem, 1.088rem + -0.3756vw, 0.75rem);
+  --h1-font-size: clamp(1.5rem, 2vw + 1rem, 1.85rem);
+  --h2-font-size: clamp(1rem, 2vw + 1rem, 1.75rem);
+  --attribute-font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  font-weight: normal;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+  min-height: 100dvh;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+  font-family: var(--Outfit-font);
+  font-size: var(--body-font-size);
+  background-color: var(--stone-100);
+  color: var(--stone-600);
+  transition: all 300ms ease-in-out;
+}
+
+picture, img{
+  display: block;
+  max-inline-size: 100%; /*max-width: 100% for internationalization approach*/
+  max-block-size: 100%; /*max-height: 100% for internationalization approach*/
+  block-size: auto;  /*replace height for internationalization approach*/  
+  inline-size: 100%; /*replace width for internationalization approach*/
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: top center;
+  box-shadow: 0 0.125rem 0.5rem var(--stone-150);
+  
+}
+
+.main-container {
+  max-inline-size: clamp(40rem, 40rem + 2vw, 45rem); /*max-width: 100% for internationalization approach*/
+  border-radius: 1.25rem;
+  background-color: var(--white);
+  box-shadow: 0 0.125rem 0.5rem var(--stone-150);
+ 
+}
+
+h1 {
+  margin: 1rem 0;
+  color: var(--stone-900);
+  text-align: center;
+  font-family: var(--Young-Serif-font);
+  font-weight: var(--Outfit-weight-bold);
+  font-size: var(--h1-font-size);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-family: var(--Young-Serif-font);
+  font-weight: var(--Outfit-weight-regular);
+  color: var(--brown-800);
+  margin: 0.5rem 0;
+}
+
+table {
+  border-collapse: collapse;
+  inline-size: 100%; /*replace width for internationalization approach*/
+  block-size: auto; /*replace height for internationalization approach*/
+}
+
+tr {
+  & + & {
+    border-block-start: 0.063rem solid var(--stone-150);
+  }
+  &:first-child {
+    padding-block-start: 0;
+  }
+  &:last-child {
+    padding-block-end: 0;
+  } 
+}
+
+hr {
+  border: none;
+  border-top: 0.063rem solid var(--stone-150);
+  margin: 2rem 0;
+  inline-size: 100%; /*replace width for internationalization approach*/
+  block-size: 0; /*replace height for internationalization approach*/ 
+  background: var(--stone-150);
+}
+
+tbody {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--white);
+  margin-block-start: 1.5rem; /* Replace margin-left for  internationalization */
+  margin-block-end: 1rem; /*replace padding-top for internationalization approach*/
+}
+
+footer {
+  text-align: center;
+}
+
+ul, ol{
+  padding-inline-start: 1.5rem; /*replace padding-left for internationalization approach*/
+  margin-block-start: 0.5rem; /*replace padding-top for internationalization approach*/
+  margin: 0.5rem 0;
+  color: var(--brown-800);
+  font-weight: var(--Outfit-weight-bold);
+}
+
+p{
+  color: var(--stone-600);
+  margin-inline-start: 1rem; /* Replace margin-left for  internationalization */
+  margin-inline-end: 1rem; /* Replace margin-right for internationalization */
+  margin-block-start: 0.5rem; /* Replace margin-top for internationalization */
+}
+
+span{
+  color: var(--stone-900);
+  font-weight: var(--Outfit-weight-bold);
+}
